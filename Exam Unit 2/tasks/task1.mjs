@@ -98,3 +98,9 @@ console.log("Cube of 5:",cube(5)); //Expected output 125
 console.log("Cube of 17:",cube(17)); //Expected output 4913
 console.log("Cube of 30:",cube(30)); //Expected output 27000
 console.log("Cube of -20:",cube(-20)); //Expected output -8000
+
+function circleArea(radius) {
+    if (radius < 0) {
+        return NaN;
+    }
+}
