@@ -56,3 +56,9 @@ console.log("-1 to Inches", inchesToMillimeter(-1)); //Expected outcome -25.4
 function calcAbsoluteValue(x) {
     return x < 0 ? -x : x;
 }
+
+function calcSquareRoot(number, tolerance = 0.0001) {
+    if (number < 0) {
+        return NaN;
+    }
+}
