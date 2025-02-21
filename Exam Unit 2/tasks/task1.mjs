@@ -86,7 +86,6 @@ test("A function that returns the cube of the number: ").isEqual(cube(30), 27000
 test("A function that returns the cube of the number: ").isEqual(cube(-20), -8000, "Cube of -20 should be -8000");
 
 
-
 function circleArea(radius) {
     if (radius < 0) {
         return NaN;
@@ -97,11 +96,10 @@ function circleArea(radius) {
     return PI * radius * radius;
 }
 
-console.log("A function that returns the area of a cirlce given the radius:");
-console.log("Circle area with radius 0: " + circleArea(0)); //Expected output is 0
-console.log("Circle area with radius 5: " + circleArea(5)); //Expected output is 78.53975
-console.log("Circle area with radius -7: " + circleArea(-7)); //Expected output is NaN
-console.log("Circle area with radius 1000: " + circleArea(1000)); //Expected output is 3141590
+test("A function that returns the area of a circle given the radius: ").isEqual(circleArea(0), 0, "Circle area with radius 0 should be 0");
+test("A function that returns the area of a circle given the radius: ").isEqual(circleArea(5), 78.53975, "Circle area with radius 5 should be 78.53975");
+test("A function that returns the area of a circle given the radius: ").isNotANumber(circleArea(-7), "Circle area with radius -7 should be NaN");
+test("A function that returns the area of a circle given the radius: ").isEqual(circleArea(1000), 3141590, "Circle area with radius 1000 should be 3141590");
 
 function greet(name) {
     return "Hello, " + name + "!";
