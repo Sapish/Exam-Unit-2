@@ -103,4 +103,14 @@ function circleArea(radius) {
     if (radius < 0) {
         return NaN;
     }
+
+    const PI = 3.14159;
+
+    return PI * radius * radius;
 }
+
+console.log("A function that returns the area of a cirlce given the radius:");
+console.log("Circle area with radius 0: " + circleArea(0)); //Expected output is 0
+console.log("Circle area with radius 5: " + circleArea(5)); //Expected output is 78.53975
+console.log("Circle area with radius -7: " + circleArea(-7)); //Expected output is NaN
+console.log("Circle area with radius 1000: " + circleArea(1000)); //Expected output is 3141590
