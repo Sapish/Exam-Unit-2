@@ -83,3 +83,7 @@ console.log("Calculate Square Root:");
 console.log(calcSquareRoot(-6)); //Expected output should be NaN
 console.log(calcSquareRoot(25)); //expected output is 5
 console.log(calcSquareRoot(1000000)); //expected output is 1000
+
+function cube(number) {
+    return number * number * number;
+}
