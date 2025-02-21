@@ -1,13 +1,4 @@
-/*
-Task Functions are a popping
-1. A function that returns the square of a number
-2. A function that returns a length in mm assuming it has been given a length in inches.
-3. A function that returns the root of a number
-4. A function that returns the cube of a number
-5. A function that returns the area of a circle given the radius.
-6. A function that returns a greeting, given a name.
-*/
-
+import test from "../test.mjs";
 
 function square(number) {
     let result = 0;
@@ -22,11 +13,9 @@ function square(number) {
     return result;
 }
 
-console.log("A function that returns the square of a number:");
-console.log("Square of 10:", square(10)); //expecting the outcome to be 100
-console.log("Square of -12:", square(-12)); //expecting the outcome to be 144
-console.log("Square of 55:", square(55)); //expecting the outcome to be 3025
-
+test("A function that returns the square of a number: ").isEqual(square(10), 100, "Square of 10 should be 100");
+test("A function that returns the square of a number: ").isEqual(square(-12), 144, "Square of -12 should be 144");
+test("A function that returns the square of a number: ").isEqual(square(55), 3025, "Square of 55 should be 3025");
 
 function inchesToMillimeter(inches) {
     let millimeter = 0;
@@ -114,3 +103,11 @@ console.log("Circle area with radius 0: " + circleArea(0)); //Expected output is
 console.log("Circle area with radius 5: " + circleArea(5)); //Expected output is 78.53975
 console.log("Circle area with radius -7: " + circleArea(-7)); //Expected output is NaN
 console.log("Circle area with radius 1000: " + circleArea(1000)); //Expected output is 3141590
+
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("Oskar")); //Expected output: Hello, Oskar!
+console.log(greet("Oskar123")); //Expected output: Hello, Oskar123!
+console.log(greet("Oskar!!")); //Expected output: Hello, Oskar!!!
