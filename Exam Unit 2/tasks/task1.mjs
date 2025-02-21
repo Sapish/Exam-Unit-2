@@ -105,6 +105,6 @@ function greet(name) {
     return "Hello, " + name + "!";
 }
 
-console.log(greet("Oskar")); //Expected output: Hello, Oskar!
-console.log(greet("Oskar123")); //Expected output: Hello, Oskar123!
-console.log(greet("Oskar!!")); //Expected output: Hello, Oskar!!!
+test(greet("Oskar")).isEqual(greet("Oskar"), "Hello, Oskar!", "Greeting should be 'Hello, Oskar!'");
+test(greet("Oskar123")).isEqual(greet("Oskar123"), "Hello, Oskar123!", "Greeting should be 'Hello, Oskar123!'");
+test(greet("Oskar!!")).isEqual(greet("Oskar!!"), "Hello, Oskar!!!", "Greeting should be 'Hello, Oskar!!!'");
