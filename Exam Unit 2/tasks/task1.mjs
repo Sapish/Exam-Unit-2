@@ -87,3 +87,7 @@ console.log(calcSquareRoot(1000000)); //expected output is 1000
 function cube(number) {
     return number * number * number;
 }
+
+function cubeUsingExponent(number) {
+    return number ** 3;
+}
