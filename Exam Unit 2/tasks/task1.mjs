@@ -15,3 +15,7 @@ function square(number) {
     }
     return result;
 }
+
+console.log("Square of 10:", square(10)); //expecting the outcome to be 100
+console.log("Square of -12:", square(-12)); //expecting the outcome to be -144
+console.log("Square of 55:", square(55)); //expecting the outcome to be 3025
