@@ -18,25 +18,8 @@ test("A function that returns the square of a number: ").isEqual(square(-12), 14
 test("A function that returns the square of a number: ").isEqual(square(55), 3025, "Square of 55 should be 3025");
 
 function inchesToMillimeter(inches) {
-    let millimeter = 0;
-    const mmPrInch = 25.4;
-    let positiveInches = inches;
-
-    if (inches < 0) {
-        positiveInches = -inches;
-    }
-
-    let i = 0;
-    while (i < positiveInches) {
-        millimeter += mmPrInch * 0.01;
-        i += 0.01;
-    }
-
-    if (inches < 0) {
-        millimeter = -millimeter;
-    }
-
-    return millimeter;
+    const MM_PR_INCH = 25.4;
+    return inches * MM_PR_INCH;
 }
 
 test("A function that converts inches to MM: ").isEqual(inchesToMillimeter(1), 25.4, "1 Inches should be 25.4 mm");
@@ -91,7 +74,7 @@ function circleArea(radius) {
         return NaN;
     }
 
-    const PI = 3.14159;
+    const PI = 3.14159265359;
 
     return PI * radius * radius;
 }
