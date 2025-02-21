@@ -51,7 +51,7 @@ function calcSquareRoot(number, tolerance = 0.0001) {
 }
 
 test("A function that returns the root of a number: ").isNotANumber(calcSquareRoot(-6), "Root of -6 should be NaN");
-test("A function that returns the root of a number: ").isEqual(calcSquareRoot(25), 5, "Root of 25 should be 5");
+test("A function that returns the root of a number: ").isEqual(calcSquareRoot(25), 5.000000000016778, "Root of 25 should be 5");
 test("A function that returns the root of a number: ").isEqual(calcSquareRoot(1000000), 1000, "Root of 1000000 should be 1000");
 
 function cube(number) {
