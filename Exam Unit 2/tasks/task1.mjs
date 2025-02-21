@@ -65,4 +65,14 @@ function calcSquareRoot(number, tolerance = 0.0001) {
     if (number === 0) {
         return 0;
     }
+
+    let guess = number / 2;
+    let previousGuess;
+
+    do {
+        previousGuess = guess;
+        guess = (guess + number / guess) / 2;
+    } while (calcAbsoluteValue(guess - previousGuess) > tolerance);
+
+    return guess;
 }
