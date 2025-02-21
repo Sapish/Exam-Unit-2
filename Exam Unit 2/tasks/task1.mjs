@@ -36,3 +36,6 @@ function inchesToMillimeter(inches) {
     return millimeter;
 }
 
+console.log("1 Inch:", inchesToMillimeter(1)); //Expected outcome 25.4
+console.log("0.5 Inches", inchesToMillimeter(0.5)); //Expected outcome 12.7
+console.log("-1 to Inches", inchesToMillimeter(-1)); //Expected outcome -25.4
