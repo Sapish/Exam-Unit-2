@@ -79,12 +79,13 @@ function cubeUsingExponent(number) {
     return number ** 3;
 }
 
-console.log("A function that returns the cube of the number:");
-console.log("Cube of 0:",cube(0)); //Expected output 0
-console.log("Cube of 5:",cube(5)); //Expected output 125
-console.log("Cube of 17:",cube(17)); //Expected output 4913
-console.log("Cube of 30:",cube(30)); //Expected output 27000
-console.log("Cube of -20:",cube(-20)); //Expected output -8000
+test("A function that returns the cube of the number: ").isEqual(cube(0), 0, "Cube of 0 should be 0");
+test("A function that returns the cube of the number: ").isEqual(cube(5), 125, "Cube of 5 should be 125");
+test("A function that returns the cube of the number: ").isEqual(cube(17), 4913, "Cube of 17 should be 4913");
+test("A function that returns the cube of the number: ").isEqual(cube(30), 27000, "Cube of 30 should be 27000");
+test("A function that returns the cube of the number: ").isEqual(cube(-20), -8000, "Cube of -20 should be -8000");
+
+
 
 function circleArea(radius) {
     if (radius < 0) {
