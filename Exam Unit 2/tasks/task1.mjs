@@ -23,16 +23,29 @@ function square(number) {
 }
 
 console.log("Square of 10:", square(10)); //expecting the outcome to be 100
-console.log("Square of -12:", square(-12)); //expecting the outcome to be -144
+console.log("Square of -12:", square(-12)); //expecting the outcome to be 144
 console.log("Square of 55:", square(55)); //expecting the outcome to be 3025
 
 
 function inchesToMillimeter(inches) {
     let millimeter = 0;
     const mmPrInch = 25.4;
-    for (let i = 0; i < inches; i++) {
-        millimeter += mmPrInch;
+    let positiveInches = inches;
+
+    if (inches < 0) {
+        positiveInches = -inches;
     }
+
+    let i = 0;
+    while (i < positiveInches) {
+        millimeter += mmPrInch * 0.01;
+        i += 0.01;
+    }
+
+    if (inches < 0) {
+        millimeter = -millimeter;
+    }
+
     return millimeter;
 }
 
