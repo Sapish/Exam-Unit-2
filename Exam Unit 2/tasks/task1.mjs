@@ -61,4 +61,8 @@ function calcSquareRoot(number, tolerance = 0.0001) {
     if (number < 0) {
         return NaN;
     }
+
+    if (number === 0) {
+        return 0;
+    }
 }
