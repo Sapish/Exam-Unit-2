@@ -10,8 +10,13 @@ Task Functions are a popping
 
 function square(number) {
     let result = 0;
-    for (let i = 0; i < number; i++) {
-        result += number;
+    let positiveNumber = number;
+
+    if (number <0) {
+        positiveNumber = -number;
+    }
+    for (let i = 0; i < positiveNumber; i++) {
+        result += positiveNumber;
     }
     return result;
 }
