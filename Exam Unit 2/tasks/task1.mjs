@@ -39,10 +39,9 @@ function inchesToMillimeter(inches) {
     return millimeter;
 }
 
-console.log("A function that converts inches to MM:");
-console.log("1 Inch:", inchesToMillimeter(1)); //Expected outcome 25.4
-console.log("0.5 Inches:", inchesToMillimeter(0.5)); //Expected outcome 12.7
-console.log("-1 to Inches:", inchesToMillimeter(-1)); //Expected outcome -25.4
+test("A function that converts inches to MM: ").isEqual(inchesToMillimeter(1), 25.4, "1 Inches should be 25.4 mm");
+test("A function that converts inches to MM: ").isEqual(inchesToMillimeter(0.5), 12.7, "0.5 Inches should be 12.7 mm");
+test("A function that converts inches to MM: ").isEqual(inchesToMillimeter(-1), -25.4, "-1 Inches should be -25.4 mm");
 
 function calcAbsoluteValue(x) {
     return x < 0 ? -x : x;
