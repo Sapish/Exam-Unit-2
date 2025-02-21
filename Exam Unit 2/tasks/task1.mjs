@@ -8,6 +8,7 @@ Task Functions are a popping
 6. A function that returns a greeting, given a name.
 */
 
+
 function square(number) {
     let result = 0;
     let positiveNumber = number;
@@ -24,3 +25,14 @@ function square(number) {
 console.log("Square of 10:", square(10)); //expecting the outcome to be 100
 console.log("Square of -12:", square(-12)); //expecting the outcome to be -144
 console.log("Square of 55:", square(55)); //expecting the outcome to be 3025
+
+
+function inchesToMillimeter(inches) {
+    let millimeter = 0;
+    const mmPrInch = 25.4;
+    for (let i = 0; i < inches; i++) {
+        millimeter += mmPrInch;
+    }
+    return millimeter;
+}
+
