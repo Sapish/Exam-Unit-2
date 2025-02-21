@@ -76,3 +76,7 @@ function calcSquareRoot(number, tolerance = 0.0001) {
 
     return guess;
 }
+
+console.log(calcSquareRoot(-6)); //Expected output should be NaN
+console.log(calcSquareRoot(25)); //expected output is 5
+console.log(calcSquareRoot(1000000)); //expected output is 1000
