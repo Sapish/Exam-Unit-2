@@ -52,8 +52,8 @@ function inchesToMillimeter(inches) {
 
 console.log("A function that converts inches to MM:");
 console.log("1 Inch:", inchesToMillimeter(1)); //Expected outcome 25.4
-console.log("0.5 Inches", inchesToMillimeter(0.5)); //Expected outcome 12.7
-console.log("-1 to Inches", inchesToMillimeter(-1)); //Expected outcome -25.4
+console.log("0.5 Inches:", inchesToMillimeter(0.5)); //Expected outcome 12.7
+console.log("-1 to Inches:", inchesToMillimeter(-1)); //Expected outcome -25.4
 
 function calcAbsoluteValue(x) {
     return x < 0 ? -x : x;
@@ -80,9 +80,9 @@ function calcSquareRoot(number, tolerance = 0.0001) {
 }
 
 console.log("A function that returns the root of a number:");
-console.log(calcSquareRoot(-6)); //Expected output should be NaN
-console.log(calcSquareRoot(25)); //expected output is 5
-console.log(calcSquareRoot(1000000)); //expected output is 1000
+console.log("Root of -6:",calcSquareRoot(-6)); //Expected output should be NaN
+console.log("Root of 25:",calcSquareRoot(25)); //expected output is 5
+console.log("Root of 1000000:",calcSquareRoot(1000000)); //expected output is 1000
 
 function cube(number) {
     return number * number * number;
@@ -93,8 +93,8 @@ function cubeUsingExponent(number) {
 }
 
 console.log("A function that returns the cube of the number:");
-console.log(cube(0)); //Expected output 0
-console.log(cube(5)); //Expected output 125
-console.log(cube(17)); //Expected output 4913
-console.log(cube(30)); //Expected output 27000
-console.log(cube(-20)); //Expected output -8000
+console.log("Cube of 0:",cube(0)); //Expected output 0
+console.log("Cube of 5:",cube(5)); //Expected output 125
+console.log("Cube of 17:",cube(17)); //Expected output 4913
+console.log("Cube of 30:",cube(30)); //Expected output 27000
+console.log("Cube of -20:",cube(-20)); //Expected output -8000
