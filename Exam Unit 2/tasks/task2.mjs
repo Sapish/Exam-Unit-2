@@ -1,5 +1,5 @@
 import fs from "fs";
-
+import path from "path";
 
 function flatten(arr) {
     const flattened = [];
@@ -24,7 +24,8 @@ function loadArrayFromFile(filepath) {
 }
 
 function main() {
-    const filepath = "./example_files/arrays.json";
+    const __dirname = import.meta.dirname;
+    const filepath = path.join(__dirname, "..", "example_files", "arrays.json")
     const nestedArrays = loadArrayFromFile(filepath);
 
     if (nestedArrays === null) {
@@ -32,4 +33,7 @@ function main() {
     }
 
     const flattened = flatten(nestedArrays);
+
+    console.log(flattened);
 }
+main();
