@@ -1,3 +1,5 @@
+import fs from "fs";
+
 
 function flatten(arr) {
     const flattened = [];
@@ -18,5 +20,14 @@ function loadArrayFromFile(filepath) {
     }catch (err) {
         console.error('Error loading JSON file:', err);
         return null;
+    }
+}
+
+function main() {
+    const filepath = "./example_files/arrays.json";
+    const nestedArrays = loadArrayFromFile(filepath);
+
+    if (nestedArrays === null) {
+        return;
     }
 }
