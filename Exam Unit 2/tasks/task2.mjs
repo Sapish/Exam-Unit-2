@@ -10,3 +10,13 @@ function flatten(arr) {
     }
     return flattened;
 }
+
+function loadArrayFromFile(filepath) {
+    try {
+        const data = fs.readFileSync(filepath, 'utf8');
+        return JSON.parse(data);
+    }catch (err) {
+        console.error('Error loading JSON file:', err);
+        return null;
+    }
+}
