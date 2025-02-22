@@ -9,3 +9,11 @@ async function loadData() {
         return null;
     }
 }
+
+async function main() {
+    const root = await loadData();
+
+    if (!root) {
+        process.exit(1);
+    }
+}
