@@ -30,4 +30,6 @@ function main() {
     if (nestedArrays === null) {
         return;
     }
+
+    const flattened = flatten(nestedArrays);
 }
