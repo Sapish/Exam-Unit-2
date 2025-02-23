@@ -1,16 +1,7 @@
 import test from "../test.mjs";
 
 function square(number) {
-    let result = 0;
-    let positiveNumber = number;
-
-    if (number <0) {
-        positiveNumber = -number;
-    }
-    for (let i = 0; i < positiveNumber; i++) {
-        result += positiveNumber;
-    }
-    return result;
+    return number * number;
 }
 
 test("A function that returns the square of a number: ").isEqual(square(10), 100, "Square of 10 should be 100");
