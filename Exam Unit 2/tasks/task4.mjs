@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { json } from "stream/consumers";
 
 function loadBooksFromFile(filepath) {
     try {
@@ -12,13 +11,31 @@ function loadBooksFromFile(filepath) {
     }
 }
 
+function booksFilterThe(books) {
+    if (!books || !Array.isArray(books)) {
+        return [];
+    }
+
+    return books.filter(book => {
+        const title = book.title;
+        if (title && title.length >= 3) {
+            const firstThree = title.substring(0, 3).toLowerCase();
+            return firstThree === "the";
+        }
+        return false;
+    });
+}
+
 async function main() {
     const __dirname = import.meta.dirname;
-    const filepath = path.join(__dirname, "..", "example_files", "nodes.json");
-    const root = await loadBooksFromFile(filepath);
-    if (root) {
-        console.log(root);
+    const filepath = path.join(__dirname, "..", "example_files", "books.json");
+    const books = await loadBooksFromFile(filepath);
+    
+    if (books) {
+        const theBooks = booksFilterThe(books);
+        console.log("Books starting with 'The': ", theBooks);
     }
 }
 
 main();
+
