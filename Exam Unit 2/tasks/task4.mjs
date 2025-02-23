@@ -26,14 +26,27 @@ function booksFilterThe(books) {
     });
 }
 
+function booksAfter1992(books) {
+    if (!books || !Array.isArray(books)) {
+        return[];
+    }
+    let count = 0;
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].publication_year > 1992) {
+            count++
+        }
+    }
+    return count;
+}
+
 async function main() {
     const __dirname = import.meta.dirname;
     const filepath = path.join(__dirname, "..", "example_files", "books.json");
     const books = await loadBooksFromFile(filepath);
     
     if (books) {
-        const theBooks = booksFilterThe(books);
-        console.log("Books starting with 'The': ", theBooks);
+        console.log("Books starting with 'The': ", booksFilterThe(books));
+        console.log("Amount of books written after 1992: ", booksAfter1992(books));
     }
 }
 
